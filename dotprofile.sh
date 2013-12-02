@@ -11,6 +11,7 @@ alias ll="__ll"
 alias lm="__emoji"
 alias '~'="cd ~;l"
 alias r='rm'
+alias g='git'
 alias '..'="cd ..;l"
 alias bb='__bb'
 alias py='__py'

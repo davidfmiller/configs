@@ -1,26 +1,30 @@
 
 # misc
 function __help() {
-#  echo ' lm';
-  echo '   r  : rm';
-  echo '   g  : git';
-  echo '   c  : cd';
-  echo '   .. : c ..';
-  echo '   ~  : c ~';
-  echo '   bb : bbedit';
-  echo '   py : python';
-  echo '   lb : launchbar';
+
+  echo '   # https://github.com/davidfmiller/dotfiles'
+  echo '   r [...]  → rm [...]';
+  echo '   g [...]  → git [...]';
+  echo '   c [...]  → cd [...]';
+  echo '   ..       → c ..';
+  echo '   ~        → c ~';
+  echo '   bb [...] → bbedit [...]';
+  echo '   py [...] → python [...]';
+  echo '   ll [...] → ls -al [...]';
+  echo '   la [...] → ls -l  [...]';
+  echo '   lb [...] → launchbar [...]';
+
 }
 alias ?='__help'
 
 # ls
-function __l ()  { ls -l "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
+function __la ()  { ls -l "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
 function __ll () { ls -al "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
 function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https://github.com/davidfmiller/lsemoji
 
-alias l='__l'
+alias la='__la'
 alias ll="__ll"
-alias lm="__emoji"
+alias l="__emoji"
 
 # sys commands
 alias r='rm'

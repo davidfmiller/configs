@@ -4,15 +4,22 @@ function __l ()  { ls -l "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; 
 function __ll () { ls -al "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
 function __bb () { bbedit "$@"; }
 function __py () { python "$@"; }
+
+# https://github.com/davidfmiller/lsemoji
 function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; }
+
+# https://github.com/davidfmiller/apples
+function __launchbar () { python ~/Documents/git/apples/launchbar "$@"; }
 
 alias l='__l'
 alias ll="__ll"
 alias lm="__emoji"
-alias '~'="cd ~;l"
+alias lb="__launchbar"
+
 alias r='rm'
 alias g='git'
-alias '..'="cd ..;l"
+alias '..'="cd ..;lm"
+alias '~'="cd ~;lm"
 alias bb='__bb'
 alias py='__py'
 

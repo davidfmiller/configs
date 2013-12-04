@@ -6,6 +6,7 @@ function __help() {
   echo '   r [...]  → rm [...]';
   echo '   g [...]  → git [...]';
   echo '   c [...]  → cd [...]';
+  echo '   o [...]  → open [...]';
   echo '   ..       → c ..';
   echo '   ~        → c ~';
   echo '   bb [...] → bbedit [...]';
@@ -33,9 +34,18 @@ alias g='git'
 
 # directory nav
 function __cd () { cd "$@"; __emoji; }
+function __open () {
+  if [ ! -n "$1" ]
+  then
+    open .
+  else
+    open "$@"
+  fi
+}
 alias 'c'="__cd"
 alias '..'="c .."
 alias '~'="c ~"
+alias 'o'="__open"
 
 # applications
 function __bb () { bbedit "$@"; }

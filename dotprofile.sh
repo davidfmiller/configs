@@ -14,9 +14,10 @@ function __help() {
   echo '   ll [...] → ls -al [...]';
   echo '   la [...] → ls -l  [...]';
   echo '   lb [...] → launchbar [...]';
+  echo '   mk [...] → mkdir [...]';
 
 }
-alias ?='__help'
+alias ?="__help"
 
 # ls
 function __la ()  { ls -l "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
@@ -26,6 +27,7 @@ function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https:
 alias la='__la'
 alias ll="__ll"
 alias l="__emoji"
+
 
 # sys commands
 alias r='rm'
@@ -46,6 +48,7 @@ alias 'c'="__cd"
 alias '..'="c .."
 alias '~'="c ~"
 alias 'o'="__open"
+alias 'mk'="mkdir"
 
 # applications
 function __bb () { bbedit "$@"; }

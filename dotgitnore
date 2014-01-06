@@ -1,6 +1,8 @@
 # compiled files/libs
 *.pyc
 .node_modules
+*.sass-cache*
+
 
 # finder/explorer config files
 .DS_Store

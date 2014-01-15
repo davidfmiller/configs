@@ -32,7 +32,8 @@ alias l="__emoji"
 # sys commands
 alias r='rm'
 alias g='git'
-
+alias desk='cd ~/Desktop; l'
+alias docs='cd ~/Documents; l'
 
 # directory nav
 function __cd () { cd "$@"; __emoji; }

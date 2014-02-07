@@ -24,14 +24,23 @@ function __la ()  { ls -l "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6="";
 function __ll () { ls -al "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
 function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https://github.com/davidfmiller/lsemoji
 
+# git (/status)
+function __g() {
+  if [ ! -n "$1" ]
+  then
+    git status
+  else
+    git "$@"
+  fi
+}
+
 alias la='__la'
 alias ll="__ll"
 alias l="__emoji"
 
-
 # sys commands
 alias r='rm'
-alias g='git'
+alias g='__g'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 

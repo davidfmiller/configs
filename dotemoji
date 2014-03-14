@@ -1,4 +1,6 @@
-# echo $EMOTHUMB
+# echo $EMOJITHUMB
 
-EMOTHUMB="👍"
-EMOHOME="🏡"
+EMOJITHUMB="👍"
+EMOJIHOME="🏡"
+EMOJIBOAT="⛵"
+

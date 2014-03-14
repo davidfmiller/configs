@@ -66,7 +66,7 @@ function __py () { python "$@"; }
 function __launchbar () { python ~/Documents/git/apples/launchbar "$@"; } # https://github.com/davidfmiller/apples
 alias bb='__bb'
 alias py='__py'
-alias lb="__launchbar"
+alias lb='__launchbar'
 
 # prompt
 export PS1="\n\u@\h: \w\n⚡  " #PROMPT_COMMAND='echo $UU'

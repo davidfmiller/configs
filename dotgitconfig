@@ -1,2 +1,5 @@
 [color]
         ui = true
+
+[alias]
+	rm = remove

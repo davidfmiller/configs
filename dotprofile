@@ -69,4 +69,4 @@ alias py='__py'
 alias lb='__launchbar'
 
 # prompt
-export PS1="\n\u@\h $(parse_git_branch): \w\n⚡  "
+export PS1="\n\u@\h: \w\n⚡  "

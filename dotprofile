@@ -34,9 +34,21 @@ function __g() {
   fi
 }
 
+# retrieve process listening on a given port number
+function __pidport() {
+  if [ ! -n "$1" ]
+  then
+    echo "🚫  No port number" >&2
+  else
+    sudo lsof -i ":$1"
+  fi
+}
+
+
 alias la='__la'
 alias ll="__ll"
 alias l="__emoji"
+alias pidport="__pidport"
 
 # sys commands
 alias r='rm'

@@ -2,7 +2,8 @@
 
 
 ## Aliases
-`c [path]` → `cd []path]`
+`c [path]` → `cd [path]`
+
 `..` → `cd ..`
 
 

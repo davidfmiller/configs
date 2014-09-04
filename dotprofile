@@ -34,13 +34,14 @@ function __g() {
   fi
 }
 
-# retrieve process listening on a given port number
-function __pidport() {
+# kill process listening on a given port number
+function __killport() {
   if [ ! -n "$1" ]
   then
     echo "🚫  No port number" >&2
   else
-    sudo lsof -i ":$1" | sed '1d' | awk '{ print $2 }'
+    PID=$(sudo lsof -i ":$1" | sed '1d' | awk '{ print $2 }')
+    sudo kill -9 ${PID}
   fi
 }
 
@@ -48,7 +49,7 @@ function __pidport() {
 alias la='__la'
 alias ll="__ll"
 alias l="__emoji"
-alias pidport="__pidport"
+alias killport="__killport"
 
 # sys commands
 alias r='rm'

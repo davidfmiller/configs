@@ -13,8 +13,7 @@
 
 
 
-### pidport (WIP)
-Retrieve the `pid` for the process listening on a given port
+### killport
+Kills the process listening on a given port
     
-    > pidport 4444
-    70576
+    > killport 4444

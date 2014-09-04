@@ -41,7 +41,10 @@ function __killport() {
     echo "🚫  No port number" >&2
   else
     PID=$(sudo lsof -i ":$1" | sed '1d' | awk '{ print $2 }')
-    sudo kill -9 ${PID}
+    if [ -n "$PID" ]
+    then
+      sudo kill -9 ${PID}
+    fi
   fi
 }
 

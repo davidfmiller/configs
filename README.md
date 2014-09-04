@@ -6,6 +6,12 @@
 
 `..` → `cd ..`
 
+`r [path]` → `rm [path]`
+
+`mk [name]` → `mkdir [name]`
+
+`~` → `cd ~`
+
 
 
 ## Utilities

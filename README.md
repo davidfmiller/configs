@@ -1,7 +1,12 @@
 # dotfiles
 
 
-## Aliases
+## dotprofile
+
+Bash profile 
+
+### Aliases
+
 `c [path]` → `cd [path]`
 
 `..` → `cd ..`
@@ -14,12 +19,18 @@
 
 
 
-## Utilities
+### Utilities
+
+
+### Mac OS-specific
+
+The profile 
+
+[apples](https://github.com/davidfmiller/apples)
 
 
 
-
-### killport
+#### killport
 Kills the process listening on a given port
     
     > killport 4444

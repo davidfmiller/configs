@@ -1,6 +1,6 @@
 # compiled files/libs
 *.pyc
-.node_modules
+node_modules
 *.sass-cache*
 
 

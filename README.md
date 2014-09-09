@@ -1,5 +1,8 @@
 # dotfiles
 
+Template containing common settings for `.gitignore`; add to your repository like so:
+
+    curl https://raw.githubusercontent.com/davidfmiller/dotfiles/master/dotgitignore >> .gitignore
 
 ## dotprofile
 

@@ -76,6 +76,11 @@ alias '~'="c ~"
 alias 'o'="__open"
 alias 'mk'="mkdir"
 
+
+# os x utilities
+alias 'xdns'="sudo killall -HUP mDNSResponder"
+alias 'close'="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"w\" using command down'"
+
 # applications
 function __bb () { bbedit "$@"; }
 function __py () { python "$@"; }

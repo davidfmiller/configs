@@ -1,3 +1,5 @@
+# cat dotgitconfig > ~/.gitconfig
+
 [filter "hawser"]
   clean = git hawser clean %f
   smudge = git hawser smudge %f

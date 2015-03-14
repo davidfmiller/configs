@@ -1,0 +1,8 @@
+# ~/.subversion/config
+
+[helpers]
+diff-cmd = ksdiff        # kaleidoscope
+merge-tool-cmd = ksdiff  
+
+[miscellany]
+global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.rej *~ #*# .#* .*.swp .DS_Store

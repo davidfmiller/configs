@@ -1,3 +1,4 @@
+# https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributesf
 # curl https://raw.githubusercontent.com/davidfmiller/dotfiles/master/dotgitattributes > ./dotgitattributes
 
 *.pbxproj binary

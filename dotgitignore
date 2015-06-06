@@ -6,6 +6,7 @@ npm-debug.log
 # compiled files/libs
 *.pyc
 node_modules
+bower_components
 *.sass-cache*
 
 # finder/explorer config files

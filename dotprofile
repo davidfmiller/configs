@@ -1,4 +1,3 @@
-
 # misc
 function __help() {
 
@@ -93,3 +92,4 @@ alias lb='__launchbar'
 
 # prompt
 export PS1="\n\u@\h: \w\n⚡  "
+export HISTFILESIZE=3000

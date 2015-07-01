@@ -6,7 +6,7 @@ Template containing common settings for `.gitignore`; add to your repository lik
 
 ## dotprofile
 
-Bash profile 
+Bash profile
 
 ### Aliases
 
@@ -21,13 +21,15 @@ Bash profile
 `~` → `cd ~`
 
 
+`json` reads from stdin and pretty prints the JSON object
+
 
 ### Utilities
 
 
 ### Mac OS-specific
 
-The profile 
+The profile
 
 [apples](https://github.com/davidfmiller/apples)
 
@@ -35,5 +37,5 @@ The profile
 
 #### killport
 Kills the process listening on a given port
-    
+
     > killport 4444

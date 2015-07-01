@@ -22,7 +22,11 @@ alias ?="__help"
 function __la ()  { ls -l "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
 function __ll () { ls -al "$@" | awk '{$1=""; $2=""; $3=""; $4=""; $5=""; $6=""; $7=""; $8=""; sub("  ", " "); print}' | awk '{$1=$1}1' | grep -v "^$"; }
 function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https://github.com/davidfmiller/lsemoji
+
+
 function __eject() { diskutil unmount "$@"; }
+
+function __json() { python -m json.tool; }
 
 # git (/status)
 function __g() {
@@ -54,6 +58,7 @@ alias ll="__ll"
 alias l="__emoji"
 alias eject="__eject"
 alias killport="__killport"
+alias json="__json"
 
 # sys commands
 alias r='rm'

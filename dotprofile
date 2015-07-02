@@ -26,7 +26,7 @@ function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https:
 
 function __eject() { diskutil unmount "$@"; }
 
-function __json() { python -m json.tool; }
+function __json() { python -m json.tool | pygmentize -l javascript; }
 
 # git (/status)
 function __g() {

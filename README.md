@@ -1,5 +1,10 @@
 # dotfiles
 
+## Dependencies
+
+Install [pygments](http://pygments.org)
+
+
 Template containing common settings for `.gitignore`; add to your repository like so:
 
     curl https://raw.githubusercontent.com/davidfmiller/dotfiles/master/dotgitignore >> .gitignore

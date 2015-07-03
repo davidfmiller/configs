@@ -26,7 +26,7 @@ function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https:
 
 function __eject() { diskutil unmount "$@"; }
 
-function __json() { python -m json.tool | pygmentize -l javascript; }
+function __jsonf() { python -m json.tool | pygmentize -l javascript; }
 
 # git (/status)
 function __g() {
@@ -58,7 +58,7 @@ alias ll="__ll"
 alias l="__emoji"
 alias eject="__eject"
 alias killport="__killport"
-alias json="__json"
+alias jsonf="__jsonf"
 
 # sys commands
 alias r='rm'

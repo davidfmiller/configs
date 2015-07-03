@@ -1,19 +1,20 @@
 # misc
 function __help() {
 
-  echo '   # https://github.com/davidfmiller/dotfiles'
-  echo '   r [...]  → rm [...]';
-  echo '   g [...]  → git [...]';
-  echo '   c [...]  → cd [...]';
-  echo '   o [...]  → open [...]';
-  echo '   ..       → c ..';
-  echo '   ~        → c ~';
-  echo '   bb [...] → bbedit [...]';
-  echo '   py [...] → python [...]';
-  echo '   ll [...] → ls -al [...]';
-  echo '   la [...] → ls -l  [...]';
-  echo '   lb [...] → launchbar [...]';
-  echo '   mk [...] → mkdir [...]';
+
+  echo '   🏥  https://github.com/davidfmiller/dotfiles'
+  echo '   r  [...]  → rm [...]';
+  echo '   g  [...]  → git [...]';
+  echo '   c  [...]  → cd [...]';
+  echo '   o  [...]  → open [...]';
+  echo '   ..        → c ..';
+  echo '   ~         → c ~';
+  echo '   bb  [...] → bbedit [...]';
+  echo '   py  [...] → python [...]';
+  echo '   ll  [...] → ls -al [...]';
+  echo '   la  [...] → ls -l  [...]';
+  echo '   lb  [...] → app launchbar [...]';
+  echo '   mk  [...] → mkdir [...]';
 
 }
 alias ?="__help"
@@ -90,7 +91,7 @@ alias 'close'="osascript -e 'tell application \"System Events\" to tell process 
 # applications
 function __bb () { bbedit "$@"; }
 function __py () { python "$@"; }
-function __launchbar () { python ~/Documents/git/apples/launchbar "$@"; } # https://github.com/davidfmiller/apples
+function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
 alias bb='__bb'
 alias py='__py'
 alias lb='__launchbar'

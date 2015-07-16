@@ -35,6 +35,11 @@ function __g() {
   fi
 }
 
+# git log
+function __glog() {
+  git log --pretty=oneline "$@"
+}
+
 
 # kill process listening on a given port number
 function __killport() {
@@ -61,7 +66,7 @@ alias killport="__killport"
 # sys commands
 alias r='rm'
 alias g='__g'
-alias glog='git log --pretty=oneline'
+alias glog='__glog' 
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 

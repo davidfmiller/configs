@@ -66,7 +66,7 @@ alias killport="__killport"
 # sys commands
 alias r='rm'
 alias g='__g'
-alias glog='__glog' 
+alias glog='__glog'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 
@@ -102,3 +102,7 @@ alias lb='__launchbar'
 # prompt
 export PS1="\n\u@\h: \w\n⚡  "
 export HISTFILESIZE=3000
+
+echo ""
+echo "📂  $PWD"
+l

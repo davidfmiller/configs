@@ -80,6 +80,7 @@ function __open () {
     open "$@"
   fi
 }
+
 alias 'c'="__cd"
 alias '..'="c .."
 alias '~'="c ~"
@@ -105,4 +106,4 @@ export HISTFILESIZE=3000
 
 echo ""
 echo "📂  $PWD"
-l
+l --prefix="  "

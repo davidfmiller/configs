@@ -105,6 +105,7 @@ alias lb='__launchbar'
 export PS1="\n\u@\h: \w\n⚡  "
 export HISTFILESIZE=3000
 
+
 echo ""
-echo "📂  ${PWD}"
-l --prefix="  "
+echo "`l --glyph "${PWD}"`  $PWD"
+l --prefix="   "

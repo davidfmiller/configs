@@ -64,6 +64,7 @@ alias killport="__killport"
 
 
 # sys commands
+alias m='mv'
 alias r='rm'
 alias g='__g'
 alias glog='__glog'
@@ -105,5 +106,5 @@ export PS1="\n\u@\h: \w\n⚡  "
 export HISTFILESIZE=3000
 
 echo ""
-echo "📂  $PWD"
+echo "📂  ${PWD}"
 l --prefix="  "

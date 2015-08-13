@@ -36,8 +36,9 @@ function __g() {
 }
 
 # git log
-function __glog() {
-  git log --pretty=oneline "$@"
+function __gl() {
+  git log --oneline --graph --decorate "$@"
+
 }
 
 
@@ -67,7 +68,7 @@ alias killport="__killport"
 alias m='mv'
 alias r='rm'
 alias g='__g'
-alias glog='__glog'
+alias gl='__gl'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 

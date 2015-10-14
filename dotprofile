@@ -11,7 +11,6 @@ function __help() {
   echo '   ~         → c ~';
   echo '   bb  [...] → bbedit [...]';
   echo '   py  [...] → python [...]';
-  echo '   ll  [...] → ls -al [...]';
   echo '   la  [...] → ls -l  [...]';
   echo '   lb  [...] → app launchbar [...]';
   echo '   mk  [...] → mkdir [...]';
@@ -58,7 +57,6 @@ function __killport() {
 
 
 alias la='__la'
-alias ll="__ll"
 alias l="__emoji"
 alias eject="__eject"
 alias killport="__killport"
@@ -71,6 +69,9 @@ alias g='__g'
 alias gl='__gl'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
+
+alias f="find . -iname"
+
 
 # directory nav
 function __cd () { cd "$@"; __emoji; }

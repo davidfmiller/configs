@@ -21,8 +21,6 @@ alias ?="__help"
 # ls
 function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https://github.com/davidfmiller/lsemoji
 
-function __eject() { diskutil unmount "$@"; }
-
 
 # git (/status)
 function __g() {
@@ -55,12 +53,9 @@ function __killport() {
   fi
 }
 
-
 alias la='__la'
 alias l="__emoji"
-alias eject="__eject"
 alias killport="__killport"
-
 
 # sys commands
 alias m='mv'
@@ -75,34 +70,45 @@ alias f="find . -iname"
 
 # directory nav
 function __cd () { cd "$@"; __emoji; }
-function __open () {
-  if [ ! -n "$1" ]
-  then
-    open .
-  else
-    open "$@"
-  fi
-}
+
 
 alias 'c'="__cd"
 alias '..'="c .."
 alias '....'="c ../.."
 alias '~'="c ~"
-alias 'o'="__open"
 alias 'mk'="mkdir"
 
+if [[ "$SYS" = "osx" ]]
+then
 
-# os x utilities
-alias 'xdns'="sudo killall -HUP mDNSResponder"
-alias 'close'="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"w\" using command down'"
+  function __open () {
+    if [ ! -n "$1" ]
+    then
+      open .
+    else
+      open "$@"
+    fi
+  }
+  alias 'o'="__open"
+
+  # os x utilities
+  alias 'xdns'="sudo killall -HUP mDNSResponder"
+  alias 'close'="osascript -e 'tell application \"System Events\" to tell process \"Terminal\" to keystroke \"w\" using command down'"
+
+  function __bb () { bbedit "$@"; }
+  alias bb='__bb'
+
+  function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
+  alias lb='__launchbar'
+
+  function __eject() { diskutil unmount "$@"; }
+  alias eject="__eject"
+
+fi
 
 # applications
-function __bb () { bbedit "$@"; }
 function __py () { python "$@"; }
-function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
-alias bb='__bb'
 alias py='__py'
-alias lb='__launchbar'
 
 # prompt
 export PS1="\n\u@\h: \w\n⚡  "

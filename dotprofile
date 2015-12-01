@@ -78,6 +78,7 @@ alias '....'="c ../.."
 alias '~'="c ~"
 alias 'mk'="mkdir"
 
+SYS=`os`
 if [[ "$SYS" = "osx" ]]
 then
 

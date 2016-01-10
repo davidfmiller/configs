@@ -35,7 +35,18 @@ function __g() {
 # git log
 function __gl() {
   git log --oneline --graph --decorate "$@"
+}
 
+#
+function __pyg() {
+
+  LANG="html"
+  if [ -n "$1" ]
+  then
+    LANG="$1"
+  fi
+
+  pygmentize -f html -l "$LANG"
 }
 
 
@@ -65,6 +76,7 @@ alias gl='__gl'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 
+alias pyg='__pyg'
 alias f="find . -iname"
 
 

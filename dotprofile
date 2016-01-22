@@ -86,7 +86,8 @@ function __cd () { cd "$@"; __emoji; }
 
 alias 'c'="__cd"
 alias '..'="c .."
-alias '....'="c ../.."
+alias '...'="c ../.."
+alias '....'="c ../../.."
 alias '~'="c ~"
 alias 'mk'="mkdir"
 

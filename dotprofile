@@ -49,7 +49,8 @@ function __gr() {
     fi
   fi
 
-  git pull --rebase $HOST $BRANCH
+  git fetch $HOST $BRANCH
+  git rebase $HOST/$BRANCH
 }
 
 # git log

@@ -32,6 +32,26 @@ function __g() {
   fi
 }
 
+# git rebase
+function __gr() {
+
+  HOST="origin"
+  BRANCH="master"
+
+  if [ -n "$2" ]
+  then
+    HOST="$1"
+    BRANCH="$2"
+  else
+    if [ -n "$1" ]
+    then
+      HOST="$1"
+    fi
+  fi
+
+  echo "git pull --rebase $HOST $BRANCH"
+}
+
 # git log
 function __gl() {
   git log --oneline --graph --decorate "$@"
@@ -72,6 +92,7 @@ alias killport="__killport"
 alias m='mv'
 alias r='rm'
 alias g='__g'
+alias gr='__gr'
 alias gl='__gl'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'

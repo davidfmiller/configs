@@ -137,7 +137,7 @@ then
   function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
   alias lb='__launchbar'
 
-  function __eject() { diskutil unmount "$@"; }
+  function __eject() { diskutil unmount "/Volumes/$@"; }
   alias eject="__eject"
 
 fi

@@ -32,6 +32,11 @@ function __g() {
   fi
 }
 
+# git (secured) commit
+function __gc() {
+  git commit -S -m "$@"
+}
+
 # git rebase
 function __gr() {
 
@@ -92,11 +97,15 @@ alias killport="__killport"
 # sys commands
 alias m='mv'
 alias r='rm'
+alias desk='cd ~/Desktop; l'
+alias docs='cd ~/Documents; l'
+
+
+# git shortcuts 
 alias g='__g'
 alias gr='__gr'
 alias gl='__gl'
-alias desk='cd ~/Desktop; l'
-alias docs='cd ~/Documents; l'
+alias gc='__gc'
 
 alias pyg='__pyg'
 alias f="find . -iname"

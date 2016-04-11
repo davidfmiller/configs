@@ -58,6 +58,17 @@ function __gr() {
   git rebase $HOST/$BRANCH
 }
 
+# gh pages
+function __ghpages() {
+
+  # TODO check to see if gh-pages branch exists
+
+  git checkout gh-pages
+  git merge master
+  git push origin gh-pages
+  git checkout master
+}
+
 # git log
 function __gl() {
   git log --oneline --graph --decorate "$@"
@@ -106,6 +117,7 @@ alias g='__g'
 alias gr='__gr'
 alias gl='__gl'
 alias gc='__gc'
+alias ghpages='__ghpages'
 
 alias pyg='__pyg'
 alias f="find . -iname"

@@ -23,7 +23,7 @@ function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https:
 
 
 # git (/status)
-function __g() {
+function __git() {
   if [ ! -n "$1" ]
   then
     git status
@@ -33,12 +33,12 @@ function __g() {
 }
 
 # git (secured) commit
-function __gc() {
+function __gitcommit() {
   git commit -S -m "$@"
 }
 
 # git rebase
-function __gr() {
+function __gitrebase() {
 
   HOST="origin"
   BRANCH="master"
@@ -58,6 +58,16 @@ function __gr() {
   git rebase $HOST/$BRANCH
 }
 
+# 
+function __gittag() {
+  if [ ! -n "$1" ]
+  then
+    echo "🚫  No version number provided" >&2
+  else
+    git tag -a "$1" -m "$1"
+  fi
+}
+
 # gh pages
 function __ghpages() {
 
@@ -70,7 +80,7 @@ function __ghpages() {
 }
 
 # git log
-function __gl() {
+function __gitlog() {
   git log --oneline --graph --decorate "$@"
 }
 
@@ -113,10 +123,11 @@ alias docs='cd ~/Documents; l'
 
 
 # git shortcuts 
-alias g='__g'
-alias gr='__gr'
-alias gl='__gl'
-alias gc='__gc'
+alias g='__git'   # git /status
+alias gr='__gitrebase' # rebase
+alias gl='__gitlog' # log
+alias gc='__gitcommit' # commit
+alias gt='__gittag' # tag
 alias ghpages='__ghpages'
 
 alias pyg='__pyg'

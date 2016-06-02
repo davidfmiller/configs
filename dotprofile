@@ -79,6 +79,11 @@ function __ghpages() {
   git checkout master
 }
 
+# git diff
+function __gitdiff() {
+  git diff "$@"
+}
+
 # git log
 function __gitlog() {
   git log --oneline --graph --decorate "$@"
@@ -124,6 +129,7 @@ alias docs='cd ~/Documents; l'
 
 # git shortcuts 
 alias g='__git'   # git /status
+alias gd='__gitdiff' # diff
 alias gr='__gitrebase' # rebase
 alias gl='__gitlog' # log
 alias gc='__gitcommit' # commit

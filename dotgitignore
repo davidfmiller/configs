@@ -5,6 +5,7 @@ npm-debug.log
 
 # compiled files/libs
 *.pyc
+build
 node_modules
 bower_components
 *.sass-cache*

@@ -1,8 +1,11 @@
+# https://clangformat.com
+
 BasedOnStyle: Chromium
+
 
 AlignTrailingComments: true
 AllowShortIfStatementsOnASingleLine: false
-BreakBeforeBraces: Attach
+BreakBeforeBraces: Allman
 ColumnLimit: 0
 IndentWidth: 4
 KeepEmptyLinesAtTheStartOfBlocks: true

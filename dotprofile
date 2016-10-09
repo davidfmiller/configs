@@ -126,6 +126,8 @@ alias r='rm'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 
+function __ql() { qlmanage -p "$@" &> /dev/null; }
+alias ql='__ql'
 
 # git shortcuts 
 alias g='__git'   # git /status
@@ -135,8 +137,11 @@ alias gl='__gitlog' # log
 alias gc='__gitcommit' # commit
 alias gt='__gittag' # tag
 alias ghpages='__ghpages'
+alias gr='gitrepo'
 
 alias pyg='__pyg'
+
+# find by name
 alias f="find . -iname"
 
 

@@ -157,7 +157,7 @@ alias '~'="c ~"
 alias 'mk'="mkdir"
 
 SYS=`os`
-if [[ "$SYS" = "osx" ]]
+if [[ "$SYS" = "macos" ]]
 then
 
   function __open () {

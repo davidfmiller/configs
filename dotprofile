@@ -137,7 +137,7 @@ alias gl='__gitlog' # log
 alias gc='__gitcommit' # commit
 alias gt='__gittag' # tag
 alias ghpages='__ghpages'
-alias gr='gitrepo'
+alias gr='git-repo'
 
 alias pyg='__pyg'
 

@@ -26,7 +26,7 @@ function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https:
 function __git() {
   if [ ! -n "$1" ]
   then
-    git status
+    git status .
   else
     git "$@"
   fi

@@ -129,6 +129,8 @@ alias docs='cd ~/Documents; l'
 function __ql() { qlmanage -p "$@" &> /dev/null; }
 alias ql='__ql'
 
+alias jb='bundle exec jekyll build'
+
 # git shortcuts 
 alias g='__git'   # git /status
 alias gd='__gitdiff' # diff

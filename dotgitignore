@@ -15,6 +15,10 @@ bower_components
 *.safariextz
 .snyk
 
+# jekyll cache/metadata
+*_site
+*.jekyll-metadata
+
 # finder/explorer config files
 .DS_Store
 .localized

@@ -163,6 +163,10 @@ then
   function __bb () { bbedit "$@"; }
   alias bb='__bb'
 
+  function __terminalProfile () { terminal-profile "$@"; }
+  alias tp='__terminalProfile'
+
+
   function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
   alias lb='__launchbar'
 

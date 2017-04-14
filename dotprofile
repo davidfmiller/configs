@@ -2,7 +2,7 @@
 function __help() {
 
 
-  echo '   🏥  https://github.com/davidfmiller/dotfiles'
+  echo '   🏥  https://github.com/davidfmiller/configs'
   echo '   r  [...]  → rm [...]';
   echo '   g  [...]  → git [...]';
   echo '   c  [...]  → cd [...]';
@@ -68,17 +68,6 @@ function __gittag() {
   fi
 }
 
-# gh pages
-function __ghpages() {
-
-  # TODO check to see if gh-pages branch exists
-
-  git checkout gh-pages
-  git merge master
-  git push origin gh-pages
-  git checkout master
-}
-
 # git diff
 function __gitdiff() {
   git diff "$@"
@@ -126,9 +115,6 @@ alias r='rm'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 
-function __ql() { qlmanage -p "$@" &> /dev/null; }
-alias ql='__ql'
-
 alias jb='bundle exec jekyll build'
 
 # git shortcuts 
@@ -138,14 +124,12 @@ alias gr='__gitrebase' # rebase
 alias gl='__gitlog' # log
 alias gc='__gitcommit' # commit
 alias gt='__gittag' # tag
-alias ghpages='__ghpages'
 alias gr='git-repo'
 
 alias pyg='__pyg'
 
 # find by name
 alias f="find . -iname"
-
 
 # directory nav
 function __cd () { cd "$@"; __emoji; }
@@ -184,15 +168,21 @@ then
 
   function __eject() { diskutil unmount "/Volumes/$@"; }
   alias eject="__eject"
+  
+  # quick look
+  function __ql() { qlmanage -p "$@" &> /dev/null; }
+  alias ql='__ql'
 
+  export PS1="\n\u@\h: \w\n⚡  "
+
+else
+  export PS1="\n\u@\h: \w\n💥  "
 fi
 
 # applications
 function __py () { python "$@"; }
 alias py='__py'
 
-# prompt
-export PS1="\n\u@\h: \w\n⚡  "
 export HISTFILESIZE=3000
 
 

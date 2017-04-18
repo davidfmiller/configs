@@ -142,8 +142,8 @@ alias '....'="c ../../.."
 alias '~'="c ~"
 alias 'mk'="mkdir"
 
-SYS=`os`
-if [[ "$SYS" = "macos" ]]
+
+if [[ `os` = "macos" ]]
 then
 
   function __open () {
@@ -163,9 +163,7 @@ then
   function __bb () { bbedit "$@"; }
   alias bb='__bb'
 
-  function __terminalProfile () { terminal-profile "$@"; }
-  alias tp='__terminalProfile'
-
+  alias tp='terminal-profile'
 
   function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
   alias lb='__launchbar'

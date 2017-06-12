@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-Install [pygments](http://pygments.org)
+Install [pip](https://pip.pypa.io/en/stable/installing/) and then [pygments](http://pygments.org)
 
 
 Template containing common settings for `.gitignore`; add to your repository like so:

@@ -64,7 +64,7 @@ function __gittag() {
   then
     echo "🚫  No version number provided" >&2
   else
-    git tag -a "$1" -m "$1"
+    git tag -s "$1" -m "$1"
   fi
 }
 

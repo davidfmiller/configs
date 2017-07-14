@@ -19,7 +19,7 @@ function __help() {
 alias ?="__help"
 
 # ls
-function __emoji () { python ~/Documents/git/lsemoji/lsemoji.py "$@"; } # https://github.com/davidfmiller/lsemoji
+function __emoji () { python ~/Documents/git/bin/lsemoji.py "$@"; } # https://github.com/davidfmiller/lsemoji
 
 
 # git (/status)

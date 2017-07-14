@@ -37,5 +37,12 @@
   prompt = false
 [mergetool]
   prompt = false
+#[diff]
+#  tool = Kaleidoscope
+
 [diff]
-  tool = Kaleidoscope
+    tool = "bbdiff"
+[difftool]
+    prompt = false
+[difftool "bbdiff"]
+    cmd = /usr/bin/bbdiff --wait --resume "$LOCAL" "$REMOTE"

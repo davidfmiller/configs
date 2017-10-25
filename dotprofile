@@ -78,6 +78,11 @@ function __gitdiff() {
   git diff "$@"
 }
 
+# git push
+function __gitpush() {
+  git push "$@"
+}
+
 # git log
 function __gitlog() {
   git log --oneline --graph --decorate "$@"
@@ -130,6 +135,7 @@ alias gl='__gitlog'    # log
 alias gc='__gitcommit' # commit
 alias gt='__gittag'    # tag
 alias gb='__gitbranch' # branch
+alias gp='__gitpush' # branch
 alias gr='git-repo'
 
 alias pyg='__pyg'

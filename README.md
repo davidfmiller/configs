@@ -4,7 +4,6 @@
 
 Install [pip](https://pip.pypa.io/en/stable/installing/) and then [pygments](http://pygments.org)
 
-
 Template containing common settings for `.gitignore`; add to your repository like so:
 
     curl https://raw.githubusercontent.com/davidfmiller/dotfiles/master/dotgitignore >> .gitignore
@@ -15,16 +14,14 @@ Bash profile
 
 ### Aliases
 
-`c [path]` → `cd [path]`
-
-`..` → `cd ..`
-
-`r [path]` → `rm [path]`
-
-`mk [name]` → `mkdir [name]`
-
-`~` → `cd ~`
-
+* `c [path]` → `cd [path]`
+* `..` → `cd ..`
+* `r [path]` → `rm [path]`
+* `mk [name]` → `mkdir [name]`
+* `~` → `cd ~`
+* `l [path]`
+* `gb` → `git branch`
+* `gp` → `git push`
 
 `json` reads from stdin and pretty prints the JSON object
 

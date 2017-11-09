@@ -125,7 +125,7 @@ alias r='rm'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 
-alias jb='bundle exec jekyll build'
+alias jek='bundle exec jekyll build'
 
 # git shortcuts 
 alias g='__git'        # git /status

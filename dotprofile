@@ -68,9 +68,19 @@ function __gittag() {
   fi
 }
 
+function __gitbranch() {
+  git branch
+}
+
+
 # git diff
 function __gitdiff() {
   git diff "$@"
+}
+
+# git push
+function __gitpush() {
+  git push "$@"
 }
 
 # git log
@@ -115,15 +125,17 @@ alias r='rm'
 alias desk='cd ~/Desktop; l'
 alias docs='cd ~/Documents; l'
 
-alias jb='bundle exec jekyll build'
+alias jek='bundle exec jekyll build'
 
 # git shortcuts 
-alias g='__git'   # git /status
-alias gd='__gitdiff' # diff
+alias g='__git'        # git /status
+alias gd='__gitdiff'   # diff
 alias gr='__gitrebase' # rebase
-alias gl='__gitlog' # log
+alias gl='__gitlog'    # log
 alias gc='__gitcommit' # commit
-alias gt='__gittag' # tag
+alias gt='__gittag'    # tag
+alias gb='__gitbranch' # branch
+alias gp='__gitpush' # branch
 alias gr='git-repo'
 
 alias pyg='__pyg'
@@ -175,10 +187,10 @@ then
   function __ql() { qlmanage -p "$@" &> /dev/null; }
   alias ql='__ql'
 
-  export PS1="\n\u@\h: \w\n⚡  "
+  export PS1="\n\u@\h: \w\n⚡ "
 
 else
-  export PS1="\n\u@\h: \w\n💥  "
+  export PS1="\n\u@\h: \w\n💥 "
 fi
 
 # applications

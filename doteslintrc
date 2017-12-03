@@ -17,7 +17,7 @@
 //    parser: 'babel-eslint',
     rules: {
         'block-scoped-var': 2,
-        'brace-style': 2,
+        'brace-style': 1,
         camelcase: [2, { properties: 'never' }],
         'comma-dangle': [2, 'never'],
         'comma-style': 2,
@@ -32,7 +32,7 @@
         'keyword-spacing': 2,
         'max-len': [
             2,
-            120,
+            200,
             4,
             { ignoreComments: true, ignoreUrls: true, ignoreStrings: true, ignoreTemplateLiterals: true }
         ],
@@ -42,7 +42,7 @@
         'no-bitwise': 2,
         'no-caller': 2,
         'no-cond-assign': 2,
-        'no-console': 2,
+//        'no-console': 2,
         'no-debugger': 2,
         'no-dupe-keys': 2,
         'no-else-return': 1,

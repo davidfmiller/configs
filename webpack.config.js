@@ -1,5 +1,3 @@
-/*jshint esnext:true */
-/* globals require, __dirname, module */
 
 const
     path = require('path');
@@ -11,23 +9,21 @@ const config = {
     path: path.resolve(__dirname, '../path'), /* destination path */
     filename: 'todo_target.bundle.js' /* entry point*/
   },
-  watch : true,
-  module : {
-    rules : [
-    {
-      test : /\.js$/,
-      include : path.resolve(__dirname, 'todo_scripts'), /* source folder */
-      use : [{
-        loader: 'babel-loader',
-        options : {
-          presets : [
+  watch: true,
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'todo_scripts'), /* source folder */
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: [
 
-          ]
-        }
-      }]
-    }
-    
-    
+            ]
+          }
+        }]
+      }
     ]
   }
 };

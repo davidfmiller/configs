@@ -1,8 +1,4 @@
-/*jshint esnext:true */
-/* globals module */
-
 module.exports = function(grunt) {
-
   'use strict';
 
   grunt.initConfig({
@@ -15,26 +11,26 @@ module.exports = function(grunt) {
           mangle: true
         },
         files: {
-          'site/assets/js/entry.js' : ['path/to/files/file.js']
+          'site/assets/js/entry.js': ['path/to/files/file.js']
         }
       }
     },*/
 
-    compass : {
-      dist : {
-        options : {
-          sassDir : 'scss', /* scss */
-          cssDir : '../css/', /* path to generated css */
-          environment : 'production',
-          outputStyle : 'compressed'
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'scss', /* scss */
+          cssDir: '../css/', /* path to generated css */
+          environment: 'production',
+          outputStyle: 'compressed'
         }
       }
     },
 
-    watch : {
-      css : {
-        files : ['scss/*.scss'],
-        tasks : ['compass']
+    watch: {
+      css: {
+        files: ['scss/*.scss'],
+        tasks: ['compass']
       }
     }
   });

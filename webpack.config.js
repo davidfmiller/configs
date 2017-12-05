@@ -1,7 +1,6 @@
-
 const
-    path = require('path');
-
+path = require('path');
+// webpack = require('webpack');
 
 const config = {
   entry: './scripts/todo_entry.js', /* entry point*/
@@ -10,6 +9,13 @@ const config = {
     filename: 'todo_target.bundle.js' /* entry point*/
   },
   watch: true,
+/*
+  plugins : [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false }
+    })
+  ],
+*/
   module: {
     rules: [
       {

@@ -19,6 +19,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
+/*          sourcemap: true,*/
           sassDir: 'scss', /* scss */
           cssDir: '../css/', /* path to generated css */
           environment: 'production',

@@ -21,14 +21,20 @@ const config = {
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'todo_scripts'), /* source folder */
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: [
 
-            ]
+        use: [
+/*          {
+            test: /\.js$/,
+            include: path.resolve(__dirname, 'src'),
+            use: [{
+              loader: 'babel-loader',
+              options: {
+                presets: ['es2015'],
+              }
+            }]
           }
-        }]
+*/
+        ]
       }
     ]
   }

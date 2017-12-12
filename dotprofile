@@ -69,7 +69,7 @@ function __gittag() {
 }
 
 function __gitbranch() {
-  git branch
+  git branch "$@"
 }
 
 

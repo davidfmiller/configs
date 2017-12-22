@@ -52,7 +52,7 @@ module.exports = {
         'no-loop-func': 2,
         'no-mixed-spaces-and-tabs': 2,
         'no-multi-str': 2,
-        'no-new': 2,
+//        'no-new': 2,
         'no-proto': 2,
         'no-script-url': 2,
         'no-shadow': 0,
@@ -68,7 +68,7 @@ module.exports = {
         'spaced-comment': [2, 'always', { markers: ['global'] }],
         'valid-jsdoc': [2, { requireReturn: false }],
         'wrap-iife': [2, 'inside'],
-        yoda: 2,
+        yoda: 2
 //        'react/jsx-uses-react': 2,
 //        'react/jsx-uses-vars': 2,
 //        'react/jsx-key': 2,

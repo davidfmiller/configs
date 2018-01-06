@@ -49,7 +49,7 @@ module.exports = {
         'no-empty': 2,
         'no-eval': 2,
         'no-iterator': 2,
-        'no-loop-func': 2,
+//        'no-loop-func': 2,
         'no-mixed-spaces-and-tabs': 2,
         'no-multi-str': 2,
 //        'no-new': 2,

@@ -21,12 +21,15 @@ alias ?="__help"
 # ls
 function __emoji () { python ~/Documents/git/bin/lsemoji "$@"; }
 
+function __gitbranch() {
+  git branch "$@"
+}
 
 # git (/status)
 function __git() {
   if [ ! -n "$1" ]
   then
-    git status -s .
+  git branch; git status -s .
   else
     git "$@"
   fi
@@ -58,7 +61,7 @@ function __gitrebase() {
   git rebase $HOST/$BRANCH
 }
 
-# 
+#
 function __gittag() {
   if [ ! -n "$1" ]
   then
@@ -68,9 +71,6 @@ function __gittag() {
   fi
 }
 
-function __gitbranch() {
-  git branch "$@"
-}
 
 
 # git diff
@@ -127,7 +127,7 @@ alias docs='cd ~/Documents; l'
 
 alias jek='bundle exec jekyll build'
 
-# git shortcuts 
+# git shortcuts
 alias g='__git'        # git /status
 alias gd='__gitdiff'   # diff
 alias gr='__gitrebase' # rebase
@@ -182,7 +182,7 @@ then
 
   function __eject() { diskutil unmount "/Volumes/$@"; }
   alias eject="__eject"
-  
+
   # quick look
   function __ql() { qlmanage -p "$@" &> /dev/null; }
   alias ql='__ql'

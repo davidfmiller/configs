@@ -29,7 +29,10 @@ function __gitbranch() {
 function __git() {
   if [ ! -n "$1" ]
   then
-  git branch; git status -s .
+
+  branch=`git rev-parse --abbrev-ref HEAD`
+
+  echo "🌳 $branch"; git status -s .
   else
     git "$@"
   fi

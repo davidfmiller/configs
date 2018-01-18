@@ -31,8 +31,10 @@ function __git() {
   then
 
   branch=`git rev-parse --abbrev-ref HEAD`
-
-  echo "🌳 $branch"; git status -s .
+  if [[ $branch ]];
+  then
+    echo "🌳 $branch"; git status -s .
+  fi
   else
     git "$@"
   fi

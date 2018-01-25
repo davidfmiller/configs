@@ -144,6 +144,12 @@ alias gp='__gitpush' # branch
 alias gr='git-repo'
 
 
+
+function __line-count() {
+  wc -l | awk '{$1=$1};1'
+}
+alias line-count='__line-count'
+
 alias filesize='stat -f%z'
 
 alias pyg='__pyg'

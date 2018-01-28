@@ -39,7 +39,7 @@ module.exports = {
         // TODO: Bring this down to 6
         'max-params': [1, { max: 10 }],
         'new-cap': [2, { newIsCap: true, capIsNew: false }],
-        'no-bitwise': 2,
+//        'no-bitwise': 2,
         'no-caller': 2,
         'no-cond-assign': 2,
 //        'no-console': 2,

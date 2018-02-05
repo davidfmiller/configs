@@ -54,7 +54,7 @@ module.exports = {
         'no-multi-str': 2,
 //        'no-new': 2,
         'no-proto': 2,
-        'no-script-url': 2,
+//        'no-script-url': 2,
         'no-shadow': 0,
         'no-trailing-spaces': 1,
         'no-undef': 2,

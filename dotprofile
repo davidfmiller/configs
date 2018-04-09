@@ -98,6 +98,18 @@ function __gitlog() {
   git log --oneline --graph --decorate "$@"
 }
 
+# show
+function __show() {
+
+  if [ ! -n "$1" ]
+  then
+    open -R .
+  else
+    open -R "$1"
+  fi
+}
+
+
 #
 function __pyg() {
 
@@ -172,7 +184,7 @@ alias '...'="c ../.."
 alias '....'="c ../../.."
 alias '~'="c ~"
 alias 'mk'="mkdir"
-
+alias 'show'="__show"
 
 if [[ `os` = "macos" ]]
 then

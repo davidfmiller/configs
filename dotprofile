@@ -18,6 +18,8 @@ function __help() {
 }
 alias ?="__help"
 
+alias xml="__xmllint"
+
 # ls
 function __emoji () { python ~/Documents/git/bin/lsemoji "$@"; }
 
@@ -38,6 +40,10 @@ function __git() {
   else
     git "$@"
   fi
+}
+
+function __xmllint() {
+  xmllint --format -
 }
 
 # git (secured) commit

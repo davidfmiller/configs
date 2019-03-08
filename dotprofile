@@ -224,10 +224,10 @@ then
   function __ql() { qlmanage -p "$@" &> /dev/null; }
   alias ql='__ql'
 
-  export PS1="\n\u@\h: \w\n⚡ "
+  export PS1="\n\u@\h: \w \n\D{%T}⚡ "
 
 else
-  export PS1="\n\u@\h: \w\n💥 "
+  export PS1="\n\u@\h: \w\n\D{%T} 💥 "
 fi
 
 # applications

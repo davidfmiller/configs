@@ -236,6 +236,8 @@ alias py='__py'
 
 export HISTFILESIZE=3000
 
+export ICLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+
 
 # echoed on new terminal window/tab
 echo ""

@@ -166,6 +166,8 @@ alias gb='__gitbranch' # branch
 alias gp='__gitpush' # branch
 alias gr='git-repo'
 
+alias dq='dequarantine'
+
 
 
 function __line-count() {
@@ -238,6 +240,7 @@ export HISTFILESIZE=3000
 
 export iCloud="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # echoed on new terminal window/tab
 echo ""

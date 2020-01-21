@@ -99,6 +99,12 @@ function __gitpush() {
   git push "$@"
 }
 
+# git undo
+function __gitundo() {
+  git reset --soft HEAD~1
+}
+
+
 # git log
 function __gitlog() {
   git log --oneline --graph --decorate "$@"
@@ -163,7 +169,8 @@ alias gl='__gitlog'    # log
 alias gc='__gitcommit' # commit
 alias gt='__gittag'    # tag
 alias gb='__gitbranch' # branch
-alias gp='__gitpush' # branch
+alias gp='__gitpush'   # push
+alias gu='__gitundo'   # soft-undo last commit
 alias gr='git-repo'
 
 alias dq='dequarantine'

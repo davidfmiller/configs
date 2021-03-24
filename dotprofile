@@ -149,6 +149,9 @@ function __killport() {
   fi
 }
 
+alias h='hugo'
+alias hp='HUGO_ENV=production hugo'
+
 alias la='__la'
 alias l="__emoji"
 alias killport="__killport"

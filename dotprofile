@@ -10,7 +10,7 @@ function __help() {
   echo '   ..        → c ..';
   echo '   ~         → c ~';
   echo '   bb  [...] → bbedit [...]';
-  echo '   py  [...] → python [...]';
+  echo '   py  [...] → python2 [...]';
   echo '   la  [...] → ls -l  [...]';
   echo '   lb  [...] → app launchbar [...]';
   echo '   mk  [...] → mkdir [...]';
@@ -21,7 +21,7 @@ alias ?="__help"
 alias xml="__xmllint"
 
 # ls
-function __emoji () { python ~/Documents/git/bin/lsemoji "$@"; }
+function __emoji () { python2 ~/Documents/git/bin/lsemoji "$@"; }
 
 function __gitbranch() {
   git branch "$@"
@@ -226,7 +226,7 @@ then
 
   alias tp='terminal-profile'
 
-  function __launchbar () { python ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
+  function __launchbar () { python2 ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
   alias lb='__launchbar'
 
   function __eject() { diskutil unmount "/Volumes/$@"; }
@@ -243,7 +243,7 @@ else
 fi
 
 # applications
-function __py () { python "$@"; }
+function __py () { python2 "$@"; }
 alias py='__py'
 
 export HISTFILESIZE=3000

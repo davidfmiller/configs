@@ -18,6 +18,8 @@ function __help() {
 }
 alias ?="__help"
 
+alias xcsimulators="xcrun simctl list devicetypes"
+
 alias xml="__xmllint"
 
 # ls

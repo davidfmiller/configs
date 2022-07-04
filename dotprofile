@@ -23,7 +23,7 @@ alias xcsimulators="xcrun simctl list devicetypes"
 alias xml="__xmllint"
 
 # ls
-function __emoji () { python2 ~/Documents/git/bin/lsemoji "$@"; }
+function __emoji () { python3 ~/Documents/git/bin/lsemoji "$@"; }
 
 function __gitbranch() {
   git branch "$@"
@@ -228,7 +228,7 @@ then
 
   alias tp='terminal-profile'
 
-  function __launchbar () { python2 ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
+  function __launchbar () { python3 ~/Documents/git/apples/app launchbar "$@"; } # https://github.com/davidfmiller/apples
   alias lb='__launchbar'
 
   function __eject() { diskutil unmount "/Volumes/$@"; }
@@ -245,7 +245,7 @@ else
 fi
 
 # applications
-function __py () { python2 "$@"; }
+function __py () { python3 "$@"; }
 alias py='__py'
 
 export HISTFILESIZE=3000

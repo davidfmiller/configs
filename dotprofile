@@ -151,8 +151,8 @@ function __killport() {
   fi
 }
 
-alias h='hugo'
-alias hp='HUGO_ENV=production hugo'
+alias h='/opt/homebrew/bin/hugo'
+alias hp='HUGO_ENV=production /opt/homebrew/bin/hugo'
 
 alias la='__la'
 alias l="__emoji"

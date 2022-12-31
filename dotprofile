@@ -151,7 +151,7 @@ function __killport() {
   fi
 }
 
-alias h='/opt/homebrew/bin/hugo'
+alias h='`(which hugo)`'
 alias hp='HUGO_ENV=production `(which hugo)`'
 
 alias la='__la'

@@ -152,7 +152,7 @@ function __killport() {
 }
 
 alias h='`(which hugo)`'
-alias hp='HUGO_ENV=production `(which hugo)`'
+alias hp='`(which hugo)` --environment production'
 
 alias la='__la'
 alias l="__emoji"
@@ -193,6 +193,8 @@ alias pyg='__pyg'
 
 # find by name
 alias f="find . -iname"
+
+alias json="python -m json.tool"
 
 # directory nav
 function __cd () { cd "$@"; __emoji; }

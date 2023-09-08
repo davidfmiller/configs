@@ -35,3 +35,10 @@ Thumbs.db
 .Trashes
 
 .hugo_build.lock
+
+
+
+# ciq
+*.mbc
+*.prg.debug.xml
+*.mcgen

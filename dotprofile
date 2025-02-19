@@ -177,7 +177,7 @@ alias gb='__gitbranch' # branch
 alias gp='__gitpush'   # push
 alias gu='__gitundo'   # soft-undo last commit
 alias gr='git-repo'
-alias gm='git submodule init && git submodule update'
+alias gm='git submodule sync --recursive && git submodule update --init --recursive'
 
 alias dq='dequarantine'
 

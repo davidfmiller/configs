@@ -3,7 +3,8 @@
 
 *.o          binary
 *.pbxproj    binary
-   
+
+*.bat        text eol=lf
 *.c          text eol=lf
 *.cjs        text eol=lf
 *.cpp        text eol=lf

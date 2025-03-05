@@ -16,6 +16,8 @@ bower_components
 *.exe
 *.safariextz
 .snyk
+.kotlin
+
 
 # jekyll cache/metadata
 *_site

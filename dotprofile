@@ -253,6 +253,8 @@ alias py='__py'
 
 export HISTFILESIZE=3000
 
+export PATH="$PATH:/opt/homebrew/bin"
+
 export iCloud="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1

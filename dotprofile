@@ -89,6 +89,7 @@ function __gittag() {
   fi
 }
 
+alias gemini="npx https://github.com/google-gemini/gemini-cli"
 
 
 # git diff

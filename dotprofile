@@ -168,7 +168,8 @@ alias docs='cd ~/Documents; l'
 alias jek='bundle exec jekyll build'
 
 # git shortcuts
-alias g='__git'        # git /status
+# alias g='__git'        # git /status
+alias g='git-status'        # git /status
 alias gd='__gitdiff'   # diff
 alias gr='__gitrebase' # rebase
 alias gl='__gitlog'    # log

@@ -5,12 +5,19 @@
     <style>
       @-webkit-keyframes rmr-pop-in { 0% {  opacity: 0;  -webkit-transform:scale(1.25) }  100% {  opacity: 1;  -webkit-transform:scale(1) } } @-moz-keyframes rmr-pop-in { 0% {  opacity: 0;  -moz-transform:scale(1.25) }  100% {  opacity: 1;  -moz-transform:scale(1) } } @keyframes rmr-pop-in { 0% {  opacity: 0;  transform:scale(1.25) }  100% {  opacity: 1;  transform:scale(1) } } .rmr-popover { position: absolute; box-shadow: 1px 1px 5px #303030; color: #fff; border-radius: 2px; z-index: 1; opacity:0 } @media (prefers-color-scheme: dark) { .rmr-popover {  box-shadow:1px 1px 5px rgba(0, 0, 0, 0.5) } } .rmr-popover .bd { position: relative; padding:5px } .rmr-popover .arrow { display: block; border: solid transparent; content: " "; height: 0; width: 0; border-color: transparent; position: absolute; pointer-events: none; z-index: 1; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top:5px solid transparent } .rmr-popover.pop { -webkit-animation: rmr-pop-in 0.2s; -moz-animation: rmr-pop-in 0.2s; -ms-animation: rmr-pop-in 0.2s; opacity: 1 }  
       div.rmr-popover { font-family: monaco, monospace; font-size: 10px; }
-
     </style>
     <script src="https://davidfmiller.github.io/rmr-popover/build/rmr-popover.bundle.js">
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select');
+        select.focus();
+
+        select.addEventListener('change', e => {
+          console.log(e.target.value);
+          document.location = '#sprite-' + e.target.value;
+        });
+
         new window.Popover(
           {
             debug : false,
@@ -19,20 +26,60 @@
               unpop : 300
             },
           },
-          { margin: 5, cache: true  }
+          { margin: 0, cache: true  }
         );
       });
     </script>
     <style>
+      fieldset:first-child {
+        padding: 10px;
+        background: rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+      }
+
+      fieldset {
+        padding: 0;
+        border: none;
+      }
+
       * { box-sizing: border-box; }
 
       ::selection {
         background: rgba(0,0,0,0.1);
       }
 
-      body { background: pink; padding: 5px; margin: 0;}
+      body {
+        background: pink;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
       ul li {
-        display: inline-block;
+        list-style-type: none;
+      }
+      ul li a {
+        transition: all 0.2s;
+        border: 5px solid transparent;
+        border-radius: 10px;
+        display: block;
+      }
+      ul li a:focus {
+        outline: none;
+      }
+
+      li a:focus,
+      li a:hover {
+        border-color: rgba(0,0,0,0.2);
+      }
+      a:target {
+        background-color: rgba(0,0,0,0.2);
       }
       svg {
         border: 5px solid transparent;
@@ -40,8 +87,6 @@
       }
       svg#rmr-master { display: none; }
       svg:hover {
-        border-color: rgba(127,127,127,0.5);
-        border-radius: 5px;
       }
       hr {
         height: 1px;
@@ -62,18 +107,29 @@
     </style>
   </head>
   <body>
+    <fieldset>
+      <select>
+        {{#each icons}}
+          <option value="{{ name }}">
+            {{ name }}
+          </option>
+        {{/each}}
+      </select>
+    </fieldset>
     {{{svg}}}
     <ul>
     {{#each icons}}
       <li data-popover="{{name}}">
-        <svg title="{{name}}"><use xlink:href="#{{name}}" /></svg>
+        <a id="sprite-{{name}}" href="#sprite-{{name}}"">
+          <svg title="{{name}}"><use xlink:href="#{{name}}" /></svg>
+        </a>
       </li>
     {{/each}}
     </ul>
     <hr>
-    <div>
+    <fieldset>
       <textarea autofocus rows="10">{{svg}}</textarea>
-    </div>
+    </fieldset>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const svg = document.querySelector('svg:first-child');

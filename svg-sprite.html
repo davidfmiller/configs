@@ -50,7 +50,8 @@
       }
 
       body {
-        background: pink;
+        background-image: url(data:image/svg+xml;charset=UTF-8;base64,PHN2ZyBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiIHdpZHRoPSIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im0wIDBoMTAwdjEwMGgtMTAweiIgZmlsbD0iIzJmMmYyZiIvPjxnIGZpbGw9IiNmZmYiPjxwYXRoIGQ9Im0wIDBoMTB2MTBoLTEweiIgb3BhY2l0eT0iLjEzOTcxOCIvPjxwYXRoIGQ9Im0xMCAxMGgxMHYxMGgtMTB6IiBvcGFjaXR5PSIuMTM5NzE4Ii8+PC9nPjwvZz48L3N2Zz4=);
+        background-repeat: repeat;
         padding: 0;
         margin: 0;
       }
@@ -76,15 +77,17 @@
 
       li a:focus,
       li a:hover {
-        border-color: rgba(0,0,0,0.2);
+        border-color: rgba(0,0,0,0.4);
       }
       a:target {
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.5);
       }
       svg {
         border: 5px solid transparent;
         transition: border-color 0.2s;
+        fill: #d0cd00;
       }
+      
       svg#rmr-master { display: none; }
       svg:hover {
       }
@@ -101,9 +104,7 @@
         font-family: monospace;
         outline: none;
       }
-      /*
-      svg { width: 50px; height: 50px; }
-      */
+
     </style>
   </head>
   <body>

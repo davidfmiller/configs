@@ -171,7 +171,6 @@ alias jek='bundle exec jekyll build'
 # alias g='__git'        # git /status
 alias g='git-command'        # git /status
 alias gd='__gitdiff'   # diff
-alias gr='__gitrebase' # rebase
 alias gl='__gitlog'    # log
 alias gc='__gitcommit' # commit
 alias gt='__gittag'    # tag
